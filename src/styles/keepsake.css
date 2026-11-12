@@ -1,0 +1,166 @@
+/* A romantic keepsake treatment, shared by every colour theme. */
+:root[data-theme=rose] {
+  --theme-bg: #1d1119;
+  --theme-surface: #36212c;
+  --theme-deep: #251720;
+  --theme-accent: #c990a1;
+  --theme-pink: #f2b9c7;
+  --theme-glow: #e5c695;
+  --theme-text: #fff3e7;
+  --theme-muted: #c8aeb4;
+}
+body { background: radial-gradient(ellipse at 55% 42%, color-mix(in srgb,var(--theme-accent) 13%,transparent),transparent 65%),var(--theme-bg); }
+#cosmic-sky { opacity: .5; }
+.orbital-planet,.scene-floor,.floating-gem { display: none; }
+.celestial-orbit { opacity: .13; }
+.nebula-light { opacity: .12; }
+.botanical { position: absolute; width: 190px; height: 340px; bottom: -25px; stroke: var(--theme-glow); stroke-width: .8; opacity: .23; }
+.botanical-left { left: -20px; }
+.botanical-right { right: -20px; transform: scaleX(-1); }
+.hanging-stars { position: absolute; top: 0; right: 17%; width: 300px; height: 190px; display: flex; justify-content: space-around; color: var(--theme-glow); opacity: .5; }
+.hanging-stars span { display: flex; align-items: center; flex-direction: column; font: 24px Georgia,serif; transform-origin: top; animation: keepsake-sway 7s ease-in-out infinite alternate; }
+.hanging-stars span::before { content: ''; width: 1px; height: 75px; background: linear-gradient(transparent,var(--theme-glow)); margin-bottom: 6px; }
+.hanging-stars span:nth-child(2n)::before { height: 120px; }
+.hanging-stars span:nth-child(3)::before { height: 45px; }
+.hanging-stars span:nth-child(2n) { animation-delay: -3s; font-size: 16px; }
+.experience { padding: 40px 24px 70px; gap: 26px; }
+.keepsake-label { font-size: 9px; letter-spacing: 3px; }
+h1,.card-heading h1,.envelope-stage h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(42px,5vw,68px); letter-spacing: -1.8px; line-height: 1.04; }
+h1 em { font-size: 1em; text-shadow: none; }
+.chapter { font-size: 9px; letter-spacing: 2.8px; color: var(--theme-glow); }
+.card-heading p { font-size: 13px; line-height: 1.9; }
+.paper,.paper.wish-paper { border-radius: 120px 120px 14px 14px; border: 1px solid color-mix(in srgb,var(--theme-glow) 30%,transparent); background: radial-gradient(ellipse at top,color-mix(in srgb,var(--theme-accent) 10%,transparent),transparent 65%),var(--theme-deep); box-shadow: 0 25px 80px #0004; }
+.paper::after { inset: 12px; border-radius: 110px 110px 7px 7px; border-color: color-mix(in srgb,var(--theme-glow) 14%,transparent); }
+.paper::before { display: none; }
+.wish-paper { padding: 50px 50px 35px; }
+.corner { top: 53px; font-size: 24px; }
+.ink-button { border-radius: 40px; padding: 15px 26px; font-size: 12px; background: linear-gradient(115deg,var(--theme-pink),var(--theme-glow)); border: 1px solid #fff3; box-shadow: 0 5px 25px #0002; font-weight: 500; }
+.ink-button:hover:not(:disabled) { background: linear-gradient(115deg,var(--theme-glow),var(--theme-pink)); box-shadow: 0 7px 28px color-mix(in srgb,var(--theme-accent) 20%,transparent); }
+.archery-active #archery-stage>.paper { background: linear-gradient(115deg,color-mix(in srgb,var(--theme-bg) 65%,transparent),transparent 80%); }
+.archery-active #archery-stage>.paper::after { inset: 20px; border-radius: 3px; border-color: color-mix(in srgb,var(--theme-glow) 18%,transparent); }
+.archery-active .card-heading { top: 7%; left: 6%; padding: 0; background: none; }
+.archery-active .card-heading h1 { font-size: clamp(36px,4.1vw,64px); margin: 21px 0 18px; line-height: 1.08; }
+.archery-active .card-heading h1 em { display: block; }
+.archery-active .card-heading p { font-size: 12px; }
+.birthday-dedication { position: absolute; left: 56%; top: 37%; width: 37%; text-align: center; pointer-events: none; opacity: .65; }
+.birthday-dedication>span:first-child { font: italic 25px var(--serif); color: var(--theme-glow); }
+.birthday-dedication strong { display: block; font: 400 clamp(64px,8vw,120px)/.88 var(--serif); letter-spacing: -5px; color: color-mix(in srgb,var(--theme-pink) 35%,transparent); margin: 20px 0 26px; }
+.birthday-dedication strong em { font-weight: 400; }
+.birthday-dedication>span:last-child { font-size: 8px; letter-spacing: 4px; color: var(--theme-muted); }
+.archery-active .archery-field::before,.archery-active .balloon::before,.field-ground { display: none; }
+.archery-active .balloon svg { filter: saturate(.65) drop-shadow(6px 14px 12px #0003); }
+.arena-score { top: 7%; right: 6%; padding: 18px 22px; border-radius: 50px 50px 12px 12px; border-color: color-mix(in srgb,var(--theme-glow) 25%,transparent); background: color-mix(in srgb,var(--theme-deep) 65%,transparent); box-shadow: none; }
+.arena-score strong { font: 42px var(--serif); margin: 8px 0; }
+.arena-score>span { font-size: 7px; letter-spacing: 1.8px; }
+.archery-active .game-controls { border-radius: 60px; padding: 8px 9px 8px 22px; box-shadow: 0 8px 40px #0002; bottom: 70px; }
+.archery-active .hint { bottom: 39px; font-size: 10px; }
+.archery-active .pop-message { background: radial-gradient(ellipse,var(--theme-bg),color-mix(in srgb,var(--theme-bg) 85%,transparent) 40%,transparent 75%); }
+.archery-active .pop-message p { font-size: 45px; }
+.progress { gap: 15px; }
+.progress-item { display: flex; align-items: center; gap: 15px; }
+.progress span { font-size: 8px; letter-spacing: 2px; }
+.progress span.current { color: var(--theme-glow); text-shadow: none; }
+.sound-switch,.theme-switch,.fullscreen-switch { min-height: 36px; }
+.envelope-stage { padding: 32px 0; }
+.envelope-stage h1 { font-size: 58px; line-height: 1.15; }
+.envelope { margin-top: 65px; }
+.envelope-hint { margin-top: 35px; font-size: 12px; }
+.wax-seal { color: #fff1dc; background: radial-gradient(circle at 30% 25%,#b66b7f,#793c50); box-shadow: 0 5px 12px #0004,inset 0 0 0 4px #b87383,inset 0 0 0 5px #d49a9d; animation: none; }
+.open-card { border: 1px solid #d7bfa1; background: #faf1e5; box-shadow: 0 5px 0 #d9c8b5,0 11px 0 #ebddcc,0 35px 80px #0005; }
+.card-leaf.letter-leaf { background: linear-gradient(90deg,#bfa48722,transparent 8%),#faf1e5; padding: 44px 38px; }
+.card-leaf.photo-leaf { background: radial-gradient(ellipse at 50% 20%,#f8e9df,transparent),#e9d9c9; border-color: #bca38c55; }
+.letter-leaf h1 { color: #593b42; font-size: 51px; }
+.letter-leaf h1 em { background: none; color: #a45d71; animation: none; }
+.letter-leaf p { font-size: 13px; line-height: 1.85; color: #785e60; }
+.letter-leaf .salutation,.letter-leaf .signature,.signature em { color: #98586a; text-shadow: none; }
+.card-leaf .chapter,.letter-bottom { color: #916f61; }
+.letter-rule { color: #a98353; text-shadow: none; animation: none; }
+.letter-bottom { border-color: #b49a7e44; font-size: 7px; }
+.typed-paragraph { position: relative; white-space: pre-line; }
+.typing-space { visibility: hidden; }
+.typing-text { position: absolute; inset: 0; }
+.typing-cursor { display: inline-block; height: 1em; width: 1px; margin-left: 2px; background: #98586a; vertical-align: -.1em; animation: typing-blink .8s step-end infinite; }
+@keyframes typing-blink { 50% { opacity: 0; } }
+@media(prefers-reduced-motion:reduce) { .typing-cursor { display: none; } }
+.photo-frame { position: relative; background: #fffaf2; border: none; border-radius: 2px; box-shadow: 0 12px 25px #684a4226; padding: 12px 12px 21px; }
+.photo-frame::before { content: ''; position: absolute; top: -14px; left: 34%; width: 34%; height: 30px; background: #c4ab8580; transform: rotate(5deg); z-index: 2; }
+.photo-frame p { color: #956575; }
+.choose-photo { background: radial-gradient(ellipse at top,#ead1c6,#d4b8ad); color: #956575; border-radius: 0; }
+.photo-leaf .photo-status,.photo-navigation span,.photo-leaf .quiet-button { color: #826365; }
+.photo-navigation button { color: #895061; border-color: #ae8a7d66; min-width: 40px; min-height: 40px; }
+.pressed-flower { color: #8a906580; }
+
+/* Eight compact glass wishes fit together without a scrolling container. */
+.birthday-notifications { position: fixed; top: max(18px,env(safe-area-inset-top)); right: max(20px,env(safe-area-inset-right)); width: min(280px,calc(100vw - 24px)); z-index: 12; text-align: left; pointer-events: none; }
+.notification-close { display: block; margin: 0 0 10px auto; height: 30px; padding: 0 12px; border: 1px solid #ffffff40; border-radius: 20px; background: #294d59cc; color: white; font-size: 11px; pointer-events: auto; backdrop-filter: blur(16px); }
+.notification-stack { display: grid; grid-template-columns: minmax(0,1fr); gap: 7px; padding: 4px; overflow: visible; }
+.birthday-notification { position: relative; min-width: 0; padding: 7px 12px; border: 1px solid #ffffff45; border-radius: 19px; background: linear-gradient(115deg,#c8b6ff40,#89e2e344 55%,#76cad829); backdrop-filter: blur(22px) saturate(1.3); -webkit-backdrop-filter: blur(22px) saturate(1.3); box-shadow: inset 0 1px 1px #ffffff70,inset 0 -2px 3px #ffffff12,3px 5px 0 #24465345,0 10px 20px #0003; color: #fff; transform-style: preserve-3d; }
+.birthday-notification:nth-child(even) { background: linear-gradient(120deg,#9ce5ee55,#72c4df38); }
+.birthday-notification:nth-child(3n) { background: linear-gradient(120deg,#d9b3e953,#a7d5e638); }
+.notification-meta { display: flex; align-items: center; justify-content: space-between; gap: 5px; margin-bottom: 5px; font-size: 9px; color: #fff; text-shadow: 0 1px 3px #0005; }
+.notification-meta small { color: #e2f4f5; font-size: 8px; }
+.birthday-notification h2 { font: 500 11px/1.3 var(--sans); margin: 0 0 3px; color: white; }
+.birthday-notification p { font: 400 10px/1.4 var(--sans); margin: 0; color: #f3f6ff; text-shadow: 0 1px 3px #0005; }
+@media(max-width:600px) {
+  .birthday-notifications { top: max(12px,env(safe-area-inset-top)); right: 10px; width: min(270px,calc(100vw - 24px)); }
+  .birthday-notification { border-radius: 16px; }
+}
+@media(max-height:700px) {
+  .birthday-notifications { top: 8px; }
+  .notification-stack { gap: 6px; }
+  .birthday-notification { padding: 6px 10px; }
+  .notification-meta { display: none; }
+}
+@media(max-height:500px) {
+  .notification-stack { gap: 4px; }
+  .birthday-notification { padding: 3px 10px; }
+  .birthday-notification h2 { font-size: 10px; margin-bottom: 1px; }
+  .birthday-notification p { font-size: 9px; line-height: 1.2; }
+}
+@media(prefers-reduced-motion:reduce) { .birthday-notification { rotate: none; translate: none; } }
+@keyframes keepsake-sway { from { rotate: -4deg; } to { rotate: 4deg; } }
+@media(min-width:1000px) { #card-stage { max-width: 1000px; } }
+@media(max-width:600px) {
+  .experience { padding: 30px 16px 65px; gap: 23px; }
+  .keepsake-label { font-size: 7px; letter-spacing: 1.6px; }
+  .archery-active #archery-stage>.paper::after { inset: 10px; }
+  .archery-active .card-heading { top: 35px; left: 25px; right: 95px; }
+  .archery-active .card-heading .chapter { font-size: 6px; letter-spacing: 1px; max-width: 190px; line-height: 1.8; }
+  .archery-active .card-heading h1 { font-size: clamp(29px,8vw,43px); margin: 15px 0; letter-spacing: -1px; }
+  .archery-active .card-heading p { font-size: 10px; line-height: 1.7; }
+  .arena-score { top: 35px; right: 22px; padding: 13px 9px; }
+  .arena-score>span { font-size: 5px; letter-spacing: .8px; }
+  .arena-score strong { font-size: 30px; }
+  .birthday-dedication { left: 30%; top: 44%; width: 66%; opacity: .55; }
+  .birthday-dedication strong { font-size: 64px; letter-spacing: -3px; margin: 13px 0 20px; }
+  .birthday-dedication>span:first-child { font-size: 20px; }
+  .birthday-dedication>span:last-child { font-size: 6px; letter-spacing: 2px; }
+  .hanging-stars { right: 5%; width: 160px; opacity: .25; }
+  .botanical { width: 110px; height: 230px; opacity: .18; }
+  .archery-active .game-controls { bottom: 86px; padding: 7px 8px 7px 15px; gap: 10px; }
+  .archery-active .game-controls input { width: 65px; }
+  .ink-button { font-size: 11px; padding: 14px 19px; }
+  .archery-active .hint { bottom: 51px; font-size: 9px; }
+  .archery-active .pop-message p { font-size: 31px; }
+  .paper,.paper.wish-paper { border-radius: 75px 75px 12px 12px; }
+  .paper::after { border-radius: 65px 65px 5px 5px; }
+  .paper.wish-paper { padding: 42px 20px 30px; }
+  .card-heading h1 { font-size: 44px; }
+  .card-heading p { font-size: 11px; }
+  .wish-note { font-size: 19px; }
+  .envelope-stage h1 { font-size: 39px; }
+  .envelope { margin-top: 55px; }
+  .card-leaf.letter-leaf { padding: 35px 28px; }
+  .letter-leaf h1 { font-size: 46px; }
+  .letter-leaf p { font-size: 13px; }
+  .chapter { font-size: 8px; }
+}
+@media(max-height:550px) and (min-width:601px) {
+  .archery-active .card-heading { top: 25px; }
+  .archery-active .card-heading h1 { font-size: 33px; margin: 12px 0; }
+  .birthday-dedication { top: 25%; }
+  .birthday-dedication strong { font-size: 70px; }
+  .archery-active .game-controls { bottom: 40px; }
+  .archery-active .hint { bottom: 13px; }
+}
+@media(prefers-reduced-motion:reduce) { .hanging-stars span { animation: none; } }

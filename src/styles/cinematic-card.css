@@ -1,0 +1,64 @@
+/* Light, depth and a slow reveal for the final keepsake. */
+.birthday-book .letter-emphasis { font-weight: 700; color: #68434f; }
+.birthday-book .book-letter-content>.chapter { font-weight: 700; line-height: 1.8; }
+.birthday-book .letter-leaf h1 em { font-weight: 700; }
+.birthday-book .open-card { perspective: 1800px; }
+.birthday-book .letter-leaf { transform-style: preserve-3d; }
+.birthday-book-cover { position: absolute; inset: 0; z-index: 5; transform-origin: left center; transform-style: preserve-3d; pointer-events: none; }
+.book-cover-front,.book-cover-back { position: absolute; inset: 0; border-radius: 0 14px 14px 0; backface-visibility: hidden; border: 1px solid #dcbb82; }
+.book-cover-front { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; padding: 30px; text-align: center; color: #f5dcad; background: linear-gradient(90deg,#351c2b,#764355 9%,#562c40 85%,#3c2031); box-shadow: inset 7px 0 12px #0005, 6px 10px 20px #0004; }
+.book-cover-front::after { content: ''; position: absolute; inset: 17px; border: 1px solid #dfbc7970; border-radius: 0 5px 5px 0; }
+.book-cover-front>span:first-child,.book-cover-front small { font-size: 8px; letter-spacing: 2.5px; line-height: 1.8; }
+.book-cover-front strong { font: 48px/1.15 var(--serif); }
+.book-cover-heart { font: 65px var(--serif); }
+.book-cover-back { transform: rotateY(180deg); background: linear-gradient(90deg,#f6e7d3,#e5cbb2); box-shadow: inset -12px 0 24px #98745230; }
+.book-opening .book-letter-content { opacity: 0; }
+.book-opened .book-letter-content { animation: book-text-reveal .7s ease-out both; }
+.birthday-book .letter-leaf h1,.birthday-book .letter-bottom { animation: none; }
+.book-opening .photo-leaf { visibility: hidden; }
+.book-opened .photo-leaf { animation: book-text-reveal .7s ease-out both; }
+.book-opening .open-card::after { display: none; }
+.book-opening .card-actions { visibility: hidden; }
+@keyframes book-text-reveal { from { opacity: 0; } to { opacity: 1; } }
+@media(max-width:600px) {
+  .birthday-book.book-opening { overflow: clip; overflow-clip-margin: 14px; }
+  .book-cover-front,.book-cover-back { border-radius: 14px 14px 0 0; }
+  .book-cover-front { justify-content: flex-start; padding-top: 85px; }
+}
+.cinematic-keepsake { position: relative; isolation: isolate; }
+.final-atmosphere { position: absolute; inset: -70px -22px -30px; overflow: hidden; z-index: -1; pointer-events: none; border-radius: 40%; }
+.final-light { position: absolute; width: 75%; height: 65%; border-radius: 50%; opacity: .65; animation: final-light-drift 12s ease-in-out infinite alternate; }
+.final-light-rose { top: 10%; left: -25%; background: radial-gradient(ellipse, #ca779747, transparent 65%); }
+.final-light-gold { right: -25%; bottom: 0; background: radial-gradient(ellipse, #e8bb7540, transparent 65%); animation-delay: -6s; }
+.final-mote { position: absolute; left: var(--mote-x); top: var(--mote-y); width: 3px; height: 3px; border-radius: 50%; background: #ffe4b6; box-shadow: 0 0 12px #ffd593; animation: final-mote-rise var(--mote-duration) var(--mote-delay) ease-in-out infinite; }
+.final-mote:nth-child(3n) { width: 6px; height: 6px; opacity: .35; }
+.final-prologue { text-align: center; margin: 0 0 28px; }
+.final-prologue>span { color: var(--theme-glow); font-size: 8px; letter-spacing: 4px; }
+.final-prologue p { margin: 11px 0 0; color: var(--theme-text); font: italic clamp(23px, 3vw, 34px)/1.3 var(--serif); }
+.cinematic-keepsake .open-card { position: relative; border-radius: 15px; border-color: #e5c5a2; box-shadow: 0 2px 0 #fff0d6, 0 7px 0 #c6a98e, 0 12px 0 #e4d1bb, 0 35px 85px #0008, 0 0 60px #c98a971c; }
+.cinematic-keepsake .open-card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: linear-gradient(110deg, transparent 25%, #fff6dd66 46%, transparent 65%); opacity: 0; animation: final-paper-light 2.8s .35s ease-out both; }
+.cinematic-keepsake .letter-leaf { background: linear-gradient(90deg, #b5967626, transparent 9%), radial-gradient(ellipse at top right, #f4d9cd80, transparent 65%), #fff5e8; }
+.cinematic-keepsake .letter-leaf h1 { animation: final-title-arrive 1.3s .15s both; }
+.cinematic-keepsake .letter-leaf h1 em { color: #a45d71; text-shadow: 0 3px 18px #bd718b22; }
+.cinematic-keepsake .photo-frame { animation: final-photo-arrive 1.5s .2s both; }
+.cinematic-keepsake .letter-rule { display: flex; align-items: center; gap: 16px; }
+.cinematic-keepsake .letter-rule::before,.cinematic-keepsake .letter-rule::after { content: ''; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, #ba956366, transparent); }
+.cinematic-keepsake .letter-bottom { animation: final-title-arrive 1s 1s both; }
+.cinematic-keepsake .card-actions { margin-top: 10px; }
+@keyframes final-light-drift { to { transform: translate(12%, -8%) scale(1.1); } }
+@keyframes final-mote-rise { 0%,100% { transform: translateY(18px); opacity: .1; } 50% { transform: translateY(-24px); opacity: .7; } }
+.cinematic-keepsake .open-card::after { background-size: 250% 100%; }
+@keyframes final-paper-light { 0% { opacity: 0; background-position: 100% 0; } 35% { opacity: .6; } 100% { opacity: 0; background-position: 0 0; } }
+@keyframes final-title-arrive { from { opacity: 0; translate: 0 12px; } to { opacity: 1; translate: 0 0; } }
+@keyframes final-photo-arrive { from { opacity: 0; translate: 0 25px; rotate: 4deg; } to { opacity: 1; translate: 0 0; rotate: 0deg; } }
+@media(max-width:600px) {
+  .final-prologue { margin-bottom: 22px; }
+  .final-prologue>span { font-size: 7px; letter-spacing: 2.5px; }
+  .final-atmosphere { inset-inline: -12px; }
+  .cinematic-keepsake .letter-leaf { background: radial-gradient(ellipse at top right, #f4d9cd80, transparent 60%), #fff5e8; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .cinematic-keepsake *, .cinematic-keepsake *::after { animation: none !important; }
+  .final-mote { opacity: .35; }
+  .cinematic-keepsake .open-card::after { display: none; }
+}

@@ -1,0 +1,11 @@
+{
+  "method": "Built-in image_gen tool",
+  "assets": [
+    "public/images/birthday-teddy.png",
+    "public/images/birthday-bunny.png"
+  ],
+  "prompts": [
+    "Use case: stylized-concept. Asset type: transparent-background cartoon mascot illustration for a romantic birthday website and animated birthday film. Primary request: a charming original cream teddy bear sitting with a small blush-pink birthday cake with one golden candle, holding one glossy heart-shaped pink balloon on a delicate gold string. Style: premium soft 3D cartoon, rounded collectible toy shapes, velvety plush fur, expressive warm dark eyes, tiny happy smile, rosy cheeks, a satin dusty-rose bow. Palette: cream, dusty rose, blush pink and champagne gold. Lighting: warm soft studio light, subtle dimensional shadows and glossy highlights on the balloon. Composition: single complete centered mascot with cake and balloon, isolated cutout, full silhouette in frame, generous transparent margin around all edges, square canvas. Make it sweet and elegant, suitable for an adult romantic birthday gift. No text, no letters, no watermark, no border, no backdrop, no floor, no extra characters. Genuinely transparent alpha background. Save the generated asset and return its local file path.",
+    "Use case: stylized-concept. Asset type: transparent-background cartoon mascot illustration for a romantic birthday website and animated birthday film. Primary request: a charming original cream-white baby bunny with long soft ears, sitting and hugging a blush pink gift box tied with a champagne-gold satin ribbon. A little pink heart-shaped tag on the gift. Style: premium soft 3D cartoon, rounded collectible toy shapes, velvety plush fur, expressive warm dark eyes, tiny happy smile, rosy cheeks, dusty-rose inner ears. Palette: cream, dusty rose, blush pink and champagne gold. Lighting: warm soft studio light, subtle dimensional shadows, soft rim light. Composition: one complete centered bunny and gift, isolated cutout, full silhouette including ears and feet in frame, generous transparent margin around all edges, square canvas. Sweet and elegant, suitable for an adult romantic birthday gift. No text, letters, watermark, border, backdrop, floor, or extra characters. Genuinely transparent alpha background. Save the generated asset and return its local file path."
+  ]
+}

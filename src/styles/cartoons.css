@@ -1,0 +1,50 @@
+/* Original transparent cartoon artwork, shared by the page and birthday film. */
+.cartoon-friends { position: absolute; inset: 0; pointer-events: none; }
+.cartoon-friend { position: absolute; filter: drop-shadow(0 22px 15px #0e081b55); transform-origin: 50% 85%; animation: friend-float 6s ease-in-out infinite; }
+.cartoon-friend img { display: block; width: 100%; height: auto; object-fit: contain; user-select: none; }
+.cartoon-bunny { animation-delay: -3s; }
+.cartoon-friends-hero { z-index: 3; }
+.cartoon-friends-hero .cartoon-teddy { width: 76%; left: -2%; top: 6%; rotate: -5deg; }
+.cartoon-friends-hero .cartoon-bunny { width: 46%; right: -1%; bottom: 13%; rotate: 5deg; }
+.has-cartoon-friends .sculpture-heart { width: 25%; left: 69%; top: 2%; opacity: .6; }
+.has-cartoon-friends .sculpture-halo { background: radial-gradient(ellipse,color-mix(in srgb,var(--theme-pink) 26%,transparent),transparent 68%); }
+.has-cartoon-friends .sculpture-plinth { width: 82%; left: 9%; bottom: 9%; }
+.has-cartoon-friends .sculpture-caption { bottom: -2%; }
+.has-cartoon-friends .note-one { top: 1%; right: 16%; z-index: 5; font-size: 17px; }
+.has-cartoon-friends .note-two { left: 4%; bottom: 5%; z-index: 5; font-size: 17px; }
+.has-cartoon-friends .hero-stickers .sticker-balloon { display: none; }
+.has-cartoon-friends .hero-stickers .sticker-gift { right: 0; bottom: -2%; scale: .6; }
+.has-cartoon-friends .hero-stickers .sticker-kiss { display: none; }
+.has-cartoon-friends .hero-stickers .sticker-star { left: 1%; top: 1%; }
+.has-cartoon-friends .star-one { left: 4%; top: 46%; }
+.has-cartoon-friends .star-three { right: 2%; bottom: 52%; }
+.cartoon-friends-film { z-index: 2; }
+.cartoon-friends-film .cartoon-teddy { width: clamp(160px,20vw,280px); left: 3%; bottom: 14%; rotate: -7deg; }
+.cartoon-friends-film .cartoon-bunny { width: clamp(150px,18vw,255px); right: 3%; bottom: 14%; rotate: 7deg; }
+.birthday-film .film-stickers .sticker-gift,.birthday-film .film-stickers .sticker-kiss { display: none; }
+.film-paused .cartoon-friend { animation-play-state: paused; }
+@keyframes friend-float { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(1deg); } }
+@media(max-width:850px) {
+  .cartoon-friends-hero .cartoon-teddy { width: 68%; left: 0; top: 2%; }
+  .cartoon-friends-hero .cartoon-bunny { width: 43%; right: 0; bottom: 16%; }
+  .has-cartoon-friends .sculpture-plinth { bottom: 12%; }
+  .has-cartoon-friends .note-two { bottom: 8%; }
+  .has-cartoon-friends .sculpture-caption { bottom: -1%; }
+}
+@media(max-width:600px) {
+  .cartoon-friends-film .cartoon-teddy { width: 120px; left: 8%; top: 13%; bottom: auto; rotate: -5deg; }
+  .cartoon-friends-film .cartoon-bunny { width: 110px; right: 8%; top: 15%; bottom: auto; rotate: 5deg; }
+  .birthday-film .film-stickers .sticker-balloon { display: none; }
+  .birthday-film .film-stickers .sticker-star { top: auto; bottom: 16%; left: 9%; }
+  .has-cartoon-friends .note-one { font-size: 14px; right: 10%; top: -1%; padding: 8px 11px; }
+  .has-cartoon-friends .note-two { font-size: 14px; left: 5%; padding: 8px 11px; }
+  .has-cartoon-friends .hero-stickers .sticker-gift { scale: .45; right: -1%; }
+}
+@media(max-height:650px) and (max-width:600px) {
+  .cartoon-friends-film .cartoon-teddy { width: 75px; top: 14%; left: 5%; }
+  .cartoon-friends-film .cartoon-bunny { width: 70px; top: 15%; right: 5%; }
+}
+@media(max-height:550px) and (min-width:601px) {
+  .cartoon-friends-film .cartoon-teddy,.cartoon-friends-film .cartoon-bunny { width: 115px; bottom: 16%; }
+}
+@media(prefers-reduced-motion:reduce) { .cartoon-friend { animation: none; } }

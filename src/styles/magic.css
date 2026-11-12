@@ -1,0 +1,23 @@
+.fireworks-canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9;mix-blend-mode:screen}
+.pointer-sparkles{position:fixed;inset:0;pointer-events:none;z-index:8;overflow:hidden}
+.pointer-sparkles span{position:absolute;font-size:15px;line-height:1;color:var(--theme-glow);text-shadow:0 0 12px var(--theme-accent);animation:pointer-spark .65s ease-out both}
+.pointer-sparkles span:nth-child(3n){color:var(--theme-pink);font-size:13px}
+.flying-arrow:before{content:'';position:absolute;right:70%;top:50%;width:105px;height:3px;border-radius:100%;transform:translateY(-50%);background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--theme-accent) 45%,transparent),var(--theme-glow));box-shadow:0 0 8px color-mix(in srgb,var(--theme-glow) 40%,transparent);pointer-events:none}
+.flying-arrow:after{content:'';position:absolute;left:85%;top:50%;width:7px;height:7px;border-radius:50%;background:var(--theme-text);box-shadow:0 0 10px var(--theme-glow),0 0 22px var(--theme-accent);transform:translate(-50%,-50%)}
+.pop-shockwave{position:absolute;left:-40px;top:-40px;width:80px;height:80px;border:2px solid var(--theme-glow);border-radius:50%;box-shadow:0 0 16px color-mix(in srgb,var(--theme-glow) 30%,transparent);animation:pop-ripple .85s ease-out both}
+.pop-shockwave.echo{border-color:var(--theme-pink);animation-delay:.1s}
+.hit-reward{position:absolute;white-space:nowrap;left:-30px;font:600 10px var(--sans);letter-spacing:2px;color:var(--theme-pink);text-shadow:0 0 15px var(--theme-accent)}
+.wish-heart-cloud{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.wish-heart-cloud span{position:absolute;left:50%;top:58%;font-size:26px;color:var(--theme-pink);text-shadow:0 0 18px var(--theme-accent);opacity:0;animation:wish-hearts 2.8s var(--heart-delay) ease-out both}
+.wish-heart-cloud span:nth-child(even){color:var(--theme-glow);font-size:19px}
+.ink-button:before{content:'';position:absolute;inset:-20% auto -20% -70%;width:35%;transform:skewX(-20deg);background:linear-gradient(90deg,transparent,#fff5,transparent);pointer-events:none}
+.ink-button:hover:not(:disabled):before{animation:button-sheen .85s ease-out}
+.letter-leaf h1 em{background:linear-gradient(110deg,var(--theme-pink) 20%,var(--theme-text) 45%,var(--theme-glow) 55%,var(--theme-pink) 80%);background-size:250% 100%;background-clip:text;-webkit-background-clip:text;color:transparent;animation:name-shimmer 8s ease-in-out infinite}
+.theme-option:has(input:checked){box-shadow:inset 0 0 20px color-mix(in srgb,var(--theme-accent) 8%,transparent)}
+@keyframes pointer-spark{from{opacity:.8;transform:translate(-50%,-50%) scale(.7) rotate(0)}to{opacity:0;transform:translate(-50%,18px) scale(.2) rotate(80deg)}}
+@keyframes pop-ripple{from{opacity:.8;transform:scale(.35)}to{opacity:0;transform:scale(2.5)}}
+@keyframes wish-hearts{0%{opacity:0;transform:translate(-50%,0) scale(.5)}15%{opacity:.8}100%{opacity:0;transform:translate(calc(-50% + var(--heart-x)),-260px) scale(1.15) rotate(18deg)}}
+@keyframes button-sheen{to{left:145%}}
+@keyframes name-shimmer{0%,25%{background-position:100% 50%}75%,100%{background-position:0% 50%}}
+@media(max-width:600px){.flying-arrow:before{width:65px}.wish-heart-cloud span{font-size:21px}.pop-shockwave{width:60px;height:60px;left:-30px;top:-30px}}
+@media(prefers-reduced-motion:reduce){.fireworks-canvas,.pointer-sparkles,.pop-shockwave,.wish-heart-cloud,.flying-arrow:before,.flying-arrow:after{display:none}.letter-leaf h1 em{background:none;color:var(--theme-pink);animation:none}.ink-button:before{display:none}}

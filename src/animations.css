@@ -1,0 +1,25 @@
+.stage-shell{width:100%;display:grid;justify-items:center;perspective:1400px}
+.stage-shell>.greeting-stage{animation:none}
+.archery-active .stage-shell{position:fixed;inset:0;transform:none!important}
+.progress-item{display:flex;gap:13px;align-items:center}
+.progress-item i{display:block}
+.hit-burst{position:absolute;z-index:6;pointer-events:none}
+.hit-burst span{position:absolute;font-size:24px;color:var(--theme-glow);text-shadow:0 0 15px var(--theme-accent)}
+#pop-count{display:inline-block}
+.pop-message{animation:none}
+.candle-smoke{position:absolute;top:-15px;width:18px;height:35px;background:radial-gradient(ellipse,var(--theme-glow),transparent 70%);filter:blur(5px);pointer-events:none}
+.photo-content{position:absolute;inset:0;display:grid;place-items:center}
+.photo-content img{width:100%;height:100%;object-fit:cover}
+.envelope{overflow:visible;perspective:900px}
+.envelope-letter{display:block;will-change:transform}
+.envelope.is-opening .wax-seal{animation:none}
+.envelope.is-opening .envelope-letter{z-index:1}
+.envelope.is-opening .envelope-fold{opacity:.7;transition:opacity .6s}
+.open-card{transform-style:preserve-3d}
+.theme-option,.photo-navigation button{transition:background .25s,border-color .25s,box-shadow .25s}
+.theme-option:hover{box-shadow:0 0 20px color-mix(in srgb,var(--theme-accent) 10%,transparent)}
+.photo-navigation button:hover{box-shadow:0 0 15px color-mix(in srgb,var(--theme-accent) 25%,transparent)}
+.greeting-stage:not(#archery-stage) .paper{animation:panel-light 4s ease-in-out infinite alternate}
+@keyframes panel-light{to{box-shadow:0 25px 90px #0007,0 0 75px color-mix(in srgb,var(--theme-accent) 15%,transparent)}}
+@media(max-width:600px){.progress-item{gap:10px}.theme-switch,.fullscreen-switch{bottom:max(10px,env(safe-area-inset-bottom))}.experience:not(:has(#archery-stage)){padding-bottom:65px}}
+@media(prefers-reduced-motion:reduce){.greeting-stage:not(#archery-stage) .paper{animation:none}.envelope-letter{will-change:auto}}

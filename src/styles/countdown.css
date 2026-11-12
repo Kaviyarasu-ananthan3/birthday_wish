@@ -1,0 +1,91 @@
+.countdown-stage { width: 100%; max-width: 1160px; display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 20px; padding: 40px 12px 0; }
+.countdown-copy { position: relative; z-index: 2; }
+.countdown-date { color: var(--theme-glow); font-size: 9px; letter-spacing: 2.6px; display: flex; align-items: center; gap: 10px; }
+.countdown-date i { width: 5px; height: 5px; border-radius: 50%; background: var(--theme-glow); box-shadow: 0 0 12px var(--theme-glow); }
+.countdown-copy h1 { font-size: clamp(45px,5.1vw,74px); margin: 30px 0 22px; line-height: 1.06; letter-spacing: -2px; }
+.countdown-copy h1 em { color: var(--theme-pink); }
+.countdown-intro { font-size: 12px; line-height: 1.95; color: var(--theme-muted); max-width: 440px; }
+.birthday-date { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin: 27px 0; color: var(--theme-glow); }
+.birthday-date>span:first-child { font-size: 23px; }
+.birthday-date time { font: 23px var(--serif); }
+.birthday-timezone { font-size: 7px; letter-spacing: 1.6px; border-left: 1px solid #c798a54d; padding-left: 12px; }
+.countdown-clock { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 13px; max-width: 440px; }
+.countdown-unit { text-align: center; }
+.countdown-tile { position: relative; height: 106px; border-radius: 14px; border: 1px solid color-mix(in srgb,var(--theme-glow) 30%,transparent); background: linear-gradient(145deg,color-mix(in srgb,var(--theme-accent) 24%,var(--theme-deep)),var(--theme-deep)); box-shadow: inset 0 1px 0 #fff2,0 5px 0 color-mix(in srgb,var(--theme-accent) 30%,var(--theme-deep)),0 12px 25px #0003; display: grid; place-items: center; perspective: 450px; }
+.countdown-tile::after { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: #0002; box-shadow: 0 1px #fff1; pointer-events: none; }
+.countdown-number { display: block; font: 500 55px/1 var(--serif); color: var(--theme-text); font-variant-numeric: tabular-nums; text-shadow: 0 3px 0 #0003; }
+.countdown-unit-label { display: block; font-size: 8px; text-transform: uppercase; letter-spacing: 2px; color: var(--theme-muted); margin-top: 18px; }
+.countdown-note { font: italic 21px/1.4 var(--serif); color: var(--theme-pink); margin: 25px 0 20px; }
+.countdown-start { min-width: 220px; min-height: 48px; }
+.countdown-start:disabled,.watch-film:disabled { opacity: .5; cursor: not-allowed; }
+.watch-film:disabled .film-play-icon { scale: 1; }
+.countdown-start>span { font-size: 18px; }
+.countdown-preview-note { display: block; font-size: 9px; color: var(--theme-muted); margin: 14px 0 0; }
+.countdown-art { width: 100%; min-width: 0; }
+.love-sculpture { height: 500px; position: relative; isolation: isolate; transform-style: preserve-3d; }
+.sculpture-halo { position: absolute; inset: 12% 5% 8%; border-radius: 50%; background: radial-gradient(ellipse,color-mix(in srgb,var(--theme-pink) 15%,transparent),transparent 66%); animation: love-halo 6s ease-in-out infinite alternate; }
+.sculpture-heart { position: absolute; width: 65%; left: 18%; top: 19%; transform-style: preserve-3d; filter: drop-shadow(0 28px 20px #0005); animation: heart-hover 6s ease-in-out infinite; }
+.sculpture-heart svg { display: block; width: 100%; overflow: visible; }
+.sculpture-orbit { position: absolute; width: 94%; height: 38%; top: 30%; left: 3%; border: 1px solid color-mix(in srgb,var(--theme-glow) 55%,transparent); border-radius: 50%; box-shadow: 0 0 20px color-mix(in srgb,var(--theme-glow) 6%,transparent); }
+.orbit-front { transform: rotate(-28deg); z-index: 2; clip-path: inset(48% -10% -10%); }
+.orbit-back { transform: rotate(-28deg); opacity: .4; clip-path: inset(-10% -10% 48%); z-index: -1; }
+.sculpture-orbit::after { content: ''; position: absolute; width: 8px; height: 8px; border-radius: 50%; background: var(--theme-glow); box-shadow: 0 0 15px var(--theme-glow); bottom: 9%; left: 15%; }
+.sculpture-star { position: absolute; color: var(--theme-glow); text-shadow: 0 0 18px #dfba9670; animation: sculpture-twinkle 4s ease-in-out infinite alternate; }
+.star-one { top: 16%; left: 12%; font-size: 38px; }
+.star-two { top: 25%; right: 6%; font-size: 17px; animation-delay: -2s; }
+.star-three { bottom: 27%; right: 18%; font-size: 28px; animation-delay: -1s; }
+.love-note { position: absolute; padding: 13px 18px; border: 1px solid #f4d1bd38; border-radius: 10px; background: linear-gradient(120deg,#eac6bd1f,#f3d8d708); backdrop-filter: blur(12px); box-shadow: 0 6px 0 #190f1644,0 15px 30px #0003; font: italic 19px var(--serif); color: var(--theme-text); z-index: 3; }
+.note-one { top: 13%; right: 2%; rotate: 9deg; animation: love-note-float 7s ease-in-out infinite alternate; }
+.note-two { bottom: 26%; left: 0; rotate: -8deg; animation: love-note-float 6s -3s ease-in-out infinite alternate; }
+.sculpture-plinth { position: absolute; width: 60%; height: 42px; left: 20%; bottom: 13%; border-radius: 50%; background: radial-gradient(ellipse at 45% 25%,#85505d55,var(--theme-deep)); border: 1px solid #dfb89844; box-shadow: 0 7px 0 var(--theme-deep),0 8px 0 #b4807544,0 16px 0 var(--theme-deep),0 17px 0 #b4807533,0 35px 35px #0006; }
+.sculpture-caption { position: absolute; bottom: 1%; width: 100%; text-align: center; font-size: 7px; letter-spacing: 3px; color: var(--theme-muted); }
+.countdown-footer { grid-column: 1/-1; display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid #ce9caa26; margin-top: 30px; padding-top: 19px; color: var(--theme-muted); }
+.countdown-footer>span:first-child { font-size: 7px; letter-spacing: 2px; }
+.countdown-footer>span:last-child { font: italic 17px var(--serif); }
+/* Extra depth on the existing keepsakes; the game collision surface stays flat. */
+.wish-paper .cake-scene { animation: cake-hover 6s ease-in-out infinite; }
+.wish-paper .cake-scene::before { animation: cake-halo 7s ease-in-out infinite alternate; }
+.photo-frame { transition: rotate .5s ease,box-shadow .5s ease; }
+@media(hover:hover) { .photo-frame:hover { rotate: 3deg; box-shadow: 0 23px 38px #684a4233; } }
+@keyframes heart-hover { 0%,100% { transform: perspective(800px) translateY(0) rotateY(-12deg) rotateZ(-6deg); } 50% { transform: perspective(800px) translateY(-17px) rotateY(10deg) rotateZ(2deg); } }
+@keyframes love-note-float { to { translate: 0 -10px; } }
+@keyframes sculpture-twinkle { to { opacity: .4; scale: .8; } }
+@keyframes love-halo { to { opacity: .5; scale: 1.1; } }
+@keyframes cake-hover { 50% { translate: 0 -7px; } }
+@keyframes cake-halo { to { opacity: .4; rotate: 8deg; } }
+@media(max-width:850px) {
+  .countdown-stage { grid-template-columns: minmax(0,1fr); max-width: 620px; padding-top: 15px; gap: 15px; }
+  .countdown-copy { text-align: center; }
+  .countdown-date,.birthday-date { justify-content: center; }
+  .countdown-intro,.countdown-clock { margin-left: auto; margin-right: auto; }
+  .countdown-copy h1 { font-size: clamp(39px,7vw,60px); }
+  .countdown-art { max-width: 380px; justify-self: center; }
+  .love-sculpture { height: 340px; }
+  .countdown-footer { margin-top: 10px; }
+  .sculpture-heart { width: 55%; left: 23%; top: 12%; }
+  .note-one { top: 7%; }
+  .note-two { bottom: 31%; }
+}
+@media(max-width:450px) {
+  .countdown-stage { padding: 10px 0 0; }
+  .countdown-copy h1 { font-size: 40px; letter-spacing: -1.2px; margin: 23px 0 18px; }
+  .countdown-date { font-size: 7px; letter-spacing: 1.5px; }
+  .countdown-intro { font-size: 11px; }
+  .countdown-intro br { display: none; }
+  .birthday-date { gap: 8px; margin: 20px 0; }
+  .birthday-date time { font-size: 20px; }
+  .birthday-timezone { font-size: 6px; letter-spacing: .6px; padding-left: 8px; }
+  .countdown-clock { gap: 9px; }
+  .countdown-tile { height: 80px; border-radius: 10px; }
+  .countdown-number { font-size: 42px; }
+  .countdown-unit-label { font-size: 7px; letter-spacing: 1px; }
+  .countdown-note { font-size: 19px; }
+  .countdown-footer { flex-direction: column; text-align: center; }
+  .countdown-footer>span:last-child { font-size: 15px; }
+  .love-sculpture { height: 300px; }
+  .love-note { font-size: 17px; padding: 10px 12px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .sculpture-heart,.sculpture-halo,.sculpture-star,.love-note,.wish-paper .cake-scene,.wish-paper .cake-scene::before { animation: none; }
+  .photo-frame { transition: none; }
+}

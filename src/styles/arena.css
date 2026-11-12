@@ -1,0 +1,57 @@
+/* The opening greeting becomes an edge-to-edge archery playground. */
+.archery-active{overflow:hidden}
+.archery-active .experience{height:100dvh;min-height:0;padding:0;display:block}
+.archery-active .keepsake-label,.archery-active .progress{display:none}
+.archery-active #archery-stage{position:fixed;inset:0;max-width:none;animation:none}
+.archery-active #archery-stage>.paper{position:relative;width:100%;height:100%;padding:0;border:0;border-radius:0;background:radial-gradient(ellipse at 70% 35%,#803da51a,transparent 50%),linear-gradient(140deg,#10122588,#090d1888);box-shadow:none;backdrop-filter:none;overflow:hidden}
+.archery-active #archery-stage>.paper:after{inset:14px;border-color:#b09bd818;border-radius:15px;z-index:0}
+.archery-active #archery-stage .corner,.archery-active #archery-stage .paper-footnote{display:none}
+.archery-active .card-heading{position:absolute;top:max(30px,env(safe-area-inset-top));left:4%;z-index:2;text-align:left;pointer-events:none}
+.archery-active .card-heading h1{font-size:36px;margin:12px 0}
+.archery-active .card-heading p{font-size:11px}
+.archery-active .archery-field{position:absolute;inset:0;width:100%;max-width:none;height:100%;margin:0;border:0;border-radius:0;background:transparent}
+.archery-active .archery-field:before{left:0;right:0;bottom:-40px;height:35%;background-size:55px 55px;transform:perspective(400px) rotateX(45deg)}
+.archery-active .archery-field:after{display:none}
+.archery-active .field-stars{inset:20% 6%;opacity:.6}
+.archery-active .target-label{display:none}
+.archery-active .balloon{width:100px;height:163px;z-index:1;animation:balloon-drift var(--float-time) var(--float-delay) ease-in-out infinite alternate}
+.archery-active .balloon:before{width:120px;height:120px;margin:-60px;border-color:#c7a3ff22}
+.archery-active .balloon.popped{animation:none;opacity:0;pointer-events:none}
+.archery-active .bow{left:9%;top:84%;width:105px;height:115px;z-index:3}
+.archery-active .aim-line{left:9%;top:84%;width:200px;z-index:2}
+.archery-active .flying-arrow{z-index:4}
+.archery-active .field-ground{bottom:10%;left:3%;right:3%;height:10%}
+.arena-score{position:absolute;right:5%;top:40px;z-index:3;text-align:center;padding:17px 25px;border:1px solid #b9a1f033;border-radius:15px;background:#111226a8;backdrop-filter:blur(12px);pointer-events:none}
+.arena-score>span{font-size:8px;letter-spacing:2px;color:#b5a5cc}
+.arena-score strong{display:block;font-size:35px;color:#c1fff0;font-weight:500;margin:5px 0}
+.arena-score strong small{font-size:18px;color:#9283ab}
+#score-dots{color:#efade3;font-size:15px;letter-spacing:3px}
+.archery-active .game-controls{position:absolute;bottom:65px;left:50%;transform:translateX(-50%);z-index:5;margin:0;flex-wrap:nowrap;background:#121326dc;border:1px solid #b49bd737;padding:13px 20px;border-radius:14px;backdrop-filter:blur(15px);white-space:nowrap}
+.archery-active .hint{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);z-index:4;width:min(600px,80%);max-width:none;margin:0;text-align:center;pointer-events:none}
+.archery-active #to-wish{position:absolute;left:50%;top:65%;transform:translate(-50%,-50%);z-index:5;white-space:nowrap}
+.archery-active .pop-message{inset:0;justify-content:center;padding-bottom:70px;background:radial-gradient(ellipse,#45226044,transparent 65%);z-index:3;pointer-events:none}
+.archery-active .pop-message p{font-size:40px}
+.archery-active .pop-message>span{font-size:90px}
+.archery-active .sound-switch{position:fixed;left:25px;bottom:25px;z-index:6}
+@keyframes balloon-drift{from{transform:translate(-50%,-31%) translate(calc(var(--drift-x) * -1),calc(var(--drift-y) * -1))}to{transform:translate(-50%,-31%) translate(var(--drift-x),var(--drift-y))}}
+@media(max-width:600px){.archery-active .card-heading{left:24px;top:25px;right:100px}.archery-active .card-heading h1{font-size:25px;letter-spacing:-1px}.archery-active .card-heading p{font-size:9px;line-height:1.6}.archery-active .card-heading p br{display:none}.archery-active .chapter{font-size:6px;letter-spacing:1.3px}.arena-score{right:20px;top:25px;padding:10px 12px;border-radius:10px}.arena-score>span{font-size:6px;letter-spacing:1px}.arena-score strong{font-size:27px}.arena-score strong small{font-size:14px}#score-dots{font-size:10px;letter-spacing:1px}.archery-active .balloon{width:72px;height:117px}.archery-active .balloon:before{width:85px;height:85px;margin:-42.5px}.archery-active .bow{left:12%;top:81%;width:72px;height:79px}.archery-active .aim-line{left:12%;top:81%;width:120px}.archery-active .game-controls{bottom:80px;padding:10px 14px;gap:12px;max-width:calc(100% - 32px)}.archery-active .game-controls input{width:90px;min-width:40px}.archery-active .hint{bottom:45px;width:88%;font-size:9px}.archery-active .sound-switch{left:50%;bottom:10px;transform:translateX(-50%);font-size:7px;padding:5px 10px}.archery-active .pop-message p{font-size:29px}.archery-active .pop-message>span{font-size:65px}.archery-active #to-wish{top:62%}}
+@media(max-height:550px) and (min-width:601px){.archery-active .card-heading{top:20px}.archery-active .card-heading h1{font-size:25px;margin:8px 0}.archery-active .card-heading p{font-size:9px}.arena-score{top:20px;padding:8px 20px}.arena-score strong{font-size:25px}.archery-active .balloon{width:72px;height:117px}.archery-active .balloon:before{width:90px;height:90px;margin:-45px}.archery-active .game-controls{bottom:30px;padding:8px 15px}.archery-active .hint{bottom:8px}.archery-active .bow,.archery-active .aim-line{top:76%}}
+@media(prefers-reduced-motion:reduce){.archery-active .balloon{animation:none;transform:translate(-50%,-31%)}}
+
+/* Balloons rise through the sky, then re-enter from below. */
+.archery-active .balloon{animation:balloon-flight var(--float-time) var(--float-delay) linear infinite}
+.archery-active .balloon svg{animation:balloon-sway 3s ease-in-out infinite alternate;transform-origin:50% 31%}
+.archery-active .balloon.popped{animation:none;opacity:0}
+@keyframes balloon-flight{
+  0%{top:110%;transform:translate(-50%,-31%) translateX(calc(var(--drift-x) * -1));opacity:0}
+  8%{opacity:1}
+  50%{transform:translate(-50%,-31%) translateX(var(--drift-x));opacity:1}
+  88%{opacity:1}
+  100%{top:-18%;transform:translate(-50%,-31%) translateX(calc(var(--drift-x) * -1));opacity:0}
+}
+@keyframes balloon-sway{from{rotate:-5deg}to{rotate:5deg}}
+.fullscreen-switch{position:fixed;right:25px;bottom:25px;z-index:6;border:1px solid #b295da55;background:#14152be8;color:#c5b8de;border-radius:20px;font-size:10px;padding:10px 15px;backdrop-filter:blur(12px)}
+.fullscreen-switch:hover{border-color:#92e9db;color:#bdfcf0}
+.fullscreen-switch[aria-pressed=true]{border-color:#87dbd35c;color:#a9f8e9}
+@media(max-width:600px){.fullscreen-switch{right:20px;bottom:10px;padding:6px 10px;font-size:8px}.archery-active .sound-switch{left:20px;transform:none;bottom:10px}.archery-active .card-heading{pointer-events:none}}
+@media(prefers-reduced-motion:reduce){.archery-active .balloon,.archery-active .balloon svg{animation:none!important}}
